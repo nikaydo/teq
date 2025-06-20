@@ -1,0 +1,19 @@
+version: "3"
+
+tasks:
+  gen:python:
+    desc: Генерация Python gRPC-контрактов из proto
+    cmds:
+      - mkdir -p grpc_contrac/gen/python
+      - |
+        python -m grpc_tools.protoc \
+          -Iproto \
+          --python_out=grpc_contrac/gen/python \
+          --grpc_python_out=grpc_contrac/gen/python \
+          proto/ai.proto
+      - touch grpc_contrac/gen/python/__init__.py
+    sources:
+      - proto/ai.proto
+    generates:
+      - grpc_contrac/gen/python/ai_pb2.py
+      - grpc_contrac/gen/python/ai_pb2_grpc.py

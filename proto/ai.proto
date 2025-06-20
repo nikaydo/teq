@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ai;   
+option go_package = "path/ai;ai";
+
+service Ai{
+    rpc Requests (ReqRequest) returns ( stream ReqResponse);
+} 
+
+message ReqRequest{
+    string prompt = 1;
+}
+
+message ReqResponse{
+    string chunk = 1;
+}
