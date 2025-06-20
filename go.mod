@@ -1,4 +1,4 @@
-module main
+module github.com/nikaydo/teq
 
 go 1.24.4
 
