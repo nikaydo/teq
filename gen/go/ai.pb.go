@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v3.21.12
-// source: proto/ai.proto
+// source: ai.proto
 
 package ai
 
@@ -30,7 +30,7 @@ type ReqRequest struct {
 
 func (x *ReqRequest) Reset() {
 	*x = ReqRequest{}
-	mi := &file_proto_ai_proto_msgTypes[0]
+	mi := &file_ai_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *ReqRequest) String() string {
 func (*ReqRequest) ProtoMessage() {}
 
 func (x *ReqRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_ai_proto_msgTypes[0]
+	mi := &file_ai_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *ReqRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReqRequest.ProtoReflect.Descriptor instead.
 func (*ReqRequest) Descriptor() ([]byte, []int) {
-	return file_proto_ai_proto_rawDescGZIP(), []int{0}
+	return file_ai_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ReqRequest) GetPrompt() string {
@@ -74,7 +74,7 @@ type ReqResponse struct {
 
 func (x *ReqResponse) Reset() {
 	*x = ReqResponse{}
-	mi := &file_proto_ai_proto_msgTypes[1]
+	mi := &file_ai_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *ReqResponse) String() string {
 func (*ReqResponse) ProtoMessage() {}
 
 func (x *ReqResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_ai_proto_msgTypes[1]
+	mi := &file_ai_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *ReqResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReqResponse.ProtoReflect.Descriptor instead.
 func (*ReqResponse) Descriptor() ([]byte, []int) {
-	return file_proto_ai_proto_rawDescGZIP(), []int{1}
+	return file_ai_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ReqResponse) GetChunk() string {
@@ -109,38 +109,37 @@ func (x *ReqResponse) GetChunk() string {
 	return ""
 }
 
-var File_proto_ai_proto protoreflect.FileDescriptor
+var File_ai_proto protoreflect.FileDescriptor
 
-const file_proto_ai_proto_rawDesc = "" +
+const file_ai_proto_rawDesc = "" +
 	"\n" +
-	"\x0eproto/ai.proto\x12\x02ai\"$\n" +
+	"\bai.proto\x12\x02ai\"$\n" +
 	"\n" +
 	"ReqRequest\x12\x16\n" +
 	"\x06prompt\x18\x01 \x01(\tR\x06prompt\"#\n" +
 	"\vReqResponse\x12\x14\n" +
 	"\x05chunk\x18\x01 \x01(\tR\x05chunk23\n" +
 	"\x02Ai\x12-\n" +
-	"\bRequests\x12\x0e.ai.ReqRequest\x1a\x0f.ai.ReqResponse0\x01B\fZ\n" +
-	"path/ai;aib\x06proto3"
+	"\bRequests\x12\x0e.ai.ReqRequest\x1a\x0f.ai.ReqResponse0\x01B\"Z github.com/nikaydo/teq/gen/go;aib\x06proto3"
 
 var (
-	file_proto_ai_proto_rawDescOnce sync.Once
-	file_proto_ai_proto_rawDescData []byte
+	file_ai_proto_rawDescOnce sync.Once
+	file_ai_proto_rawDescData []byte
 )
 
-func file_proto_ai_proto_rawDescGZIP() []byte {
-	file_proto_ai_proto_rawDescOnce.Do(func() {
-		file_proto_ai_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_ai_proto_rawDesc), len(file_proto_ai_proto_rawDesc)))
+func file_ai_proto_rawDescGZIP() []byte {
+	file_ai_proto_rawDescOnce.Do(func() {
+		file_ai_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_ai_proto_rawDesc), len(file_ai_proto_rawDesc)))
 	})
-	return file_proto_ai_proto_rawDescData
+	return file_ai_proto_rawDescData
 }
 
-var file_proto_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_proto_ai_proto_goTypes = []any{
+var file_ai_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_ai_proto_goTypes = []any{
 	(*ReqRequest)(nil),  // 0: ai.ReqRequest
 	(*ReqResponse)(nil), // 1: ai.ReqResponse
 }
-var file_proto_ai_proto_depIdxs = []int32{
+var file_ai_proto_depIdxs = []int32{
 	0, // 0: ai.Ai.Requests:input_type -> ai.ReqRequest
 	1, // 1: ai.Ai.Requests:output_type -> ai.ReqResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -150,26 +149,26 @@ var file_proto_ai_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_ai_proto_init() }
-func file_proto_ai_proto_init() {
-	if File_proto_ai_proto != nil {
+func init() { file_ai_proto_init() }
+func file_ai_proto_init() {
+	if File_ai_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_ai_proto_rawDesc), len(file_proto_ai_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_ai_proto_rawDesc), len(file_ai_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_ai_proto_goTypes,
-		DependencyIndexes: file_proto_ai_proto_depIdxs,
-		MessageInfos:      file_proto_ai_proto_msgTypes,
+		GoTypes:           file_ai_proto_goTypes,
+		DependencyIndexes: file_ai_proto_depIdxs,
+		MessageInfos:      file_ai_proto_msgTypes,
 	}.Build()
-	File_proto_ai_proto = out.File
-	file_proto_ai_proto_goTypes = nil
-	file_proto_ai_proto_depIdxs = nil
+	File_ai_proto = out.File
+	file_ai_proto_goTypes = nil
+	file_ai_proto_depIdxs = nil
 }

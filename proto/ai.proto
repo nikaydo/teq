@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package ai;   
-option go_package = "path/ai;ai";
+option go_package = "github.com/nikaydo/teq/gen/go;ai";
 
 service Ai{
     rpc Requests (ReqRequest) returns ( stream ReqResponse);

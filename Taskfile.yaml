@@ -17,3 +17,6 @@ tasks:
     generates:
       - grpc_contrac/gen/python/ai_pb2.py
       - grpc_contrac/gen/python/ai_pb2_grpc.py
+  gen:go:
+    cmds:
+      - protoc -I proto proto/ai.proto --go_out=./gen/go/ --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
